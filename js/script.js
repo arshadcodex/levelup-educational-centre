@@ -97,8 +97,8 @@ if (whatsappCountry && whatsappFlag) {
   });
 }
 
-  // ---- 0. Dark mode toggle ----
-  const themeToggle = document.getElementById('themeToggle');
+    // ---- 0. Dark mode toggle ----
+  const themeToggles = document.querySelectorAll('.theme-toggle');
   const htmlRoot = document.documentElement;
 
   const savedTheme = localStorage.getItem('theme');
@@ -107,8 +107,8 @@ if (whatsappCountry && whatsappFlag) {
     htmlRoot.setAttribute('data-theme', 'dark');
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
+  themeToggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
       const isDark = htmlRoot.getAttribute('data-theme') === 'dark';
 
       if (isDark) {
@@ -119,7 +119,7 @@ if (whatsappCountry && whatsappFlag) {
         localStorage.setItem('theme', 'dark');
       }
     });
-  }
+  });
 
   // ---- 1. Mobile hamburger menu ----
   const navToggle = document.querySelector('.nav-toggle');
