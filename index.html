@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level Up Educational Centre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Level Up Educational Centre" class="nav-logo-img" id="logoImg" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+        <span class="nav-logo-text" style="display:none;">LEC</span>
+        <span class="nav-logo-fullname">Level Up<br>Educational Centre</span>
+      </a>
+
+      <ul class="nav-links">
+                <li class="nav-mobile-actions">
+          <select class="lang-select" aria-label="Choose language">
+            <option value="en">EN</option>
+            <option value="ta">தமிழ்</option>
+            <option value="si">සිංහල</option>
+          </select>
+          <button class="btn btn-outline" data-open-modal="login">Login</button>
+          <button class="btn btn-primary" data-open-modal="signup">Sign Up</button>
+        </li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        
+        <li><a href="#subjects" data-i18n="nav_subjects">Subjects</a></li>
+        <li><a href="#classes" data-i18n="nav_classes">Classes</a></li>
+        <li><a href="#fees" data-i18n="nav_fees">Fees</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <select class="lang-select" id="langSelect" aria-label="Choose language">
+          <option value="en">EN</option>
+          <option value="ta">தமிழ்</option>
+          <option value="si">සිංහල</option>
+        </select>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon-light">&#9728;</span>
+          <span class="theme-icon-dark">&#127769;</span>
+        </button>
+        <button class="btn btn-outline" data-open-modal="login" data-i18n="btn_login">Login</button>
+        <button class="btn btn-primary" data-open-modal="signup" data-i18n="btn_signup">Sign Up</button>
+
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <div class="hero-text">
+        <span class="hero-badge" data-i18n="hero_badge">Mathematics &middot; Science &middot; Grades 6-11</span>
+        <h1 data-i18n="hero_title">Personal, professional teaching <br>  in person or online</h1>
+        <p data-i18n="hero_desc">
+          Individual home classes, small group sessions, and live Zoom classes,
+          taught with a personal touch and tracked in one simple dashboard for
+          students and parents.<br><br><br><br><br><br>
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-open-modal="signup" data-i18n="hero_cta_request">Request a Class</button>
+          <a href="#subjects" class="btn btn-outline" data-i18n="hero_cta_subjects">View Subjects</a>
+        </div>
+      </div>
+
+    
+    </div>
+  </section>
+   
+
+  <!-- ================= SUBJECTS SECTION ================= -->
+  <section class="subjects" id="subjects">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow" data-i18n="subjects_eyebrow">What We Teach</span>
+        <h2 data-i18n="subjects_title">Subjects &amp; Grades</h2>
+        <p data-i18n="subjects_desc">Currently offering Mathematics and Science for Grades 6&ndash;11, with more subjects planned.</p>
+      </div>
+
+      <div class="subject-grid">
+
+        <div class="subject-card">
+          <div class="subject-icon">&#8721;</div>
+          <h3 data-i18n="subj_math_title">Mathematics</h3>
+          <p data-i18n="subj_math_desc">Algebra, geometry, statistics and exam preparation for Grades 6&ndash;11.</p>
+          <span class="subject-tag" data-i18n="subj_grades">Grades 6&ndash;11</span>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-icon">&#9878;</div>
+          <h3 data-i18n="subj_sci_title">Science</h3>
+          <p data-i18n="subj_sci_desc">Physics, chemistry and biology fundamentals for Grades 6&ndash;11.</p>
+          <span class="subject-tag" data-i18n="subj_grades">Grades 6&ndash;11</span>
+        </div>
+
+        <div class="subject-card subject-card-soon">
+          <div class="subject-icon">&#128187;</div>
+          <h3 data-i18n="subj_ict_title">ICT</h3>
+          <p data-i18n="subj_ict_desc">Coming soon &mdash; computing and digital skills.</p>
+          <span class="subject-tag subject-tag-soon" data-i18n="subj_soon">Coming Soon</span>
+        </div>
+
+        <div class="subject-card subject-card-soon">
+          <div class="subject-icon">&#128218;</div>
+          <h3 data-i18n="subj_eng_title">English</h3>
+          <p data-i18n="subj_eng_desc">Coming soon &mdash; reading, writing and communication.</p>
+          <span class="subject-tag subject-tag-soon" data-i18n="subj_soon">Coming Soon</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLASSES SECTION ================= -->
+  <section class="classes" id="classes">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow" data-i18n="classes_eyebrow">How You Can Learn</span>
+        <h2 data-i18n="classes_title">Class Types</h2>
+        <p data-i18n="classes_desc">Choose the format that fits your schedule and learning style.</p>
+      </div>
+
+      <div class="class-grid">
+
+        <div class="class-card">
+          <div class="class-icon">&#127968;</div>
+          <h3 data-i18n="class_individual_title">Individual / Home</h3>          <span class="medium-tag medium-tag-both" data-i18n="medium_individual">Tamil &amp; English</span>
+          <p data-i18n="class_individual_desc">One-on-one classes at your home, with a schedule built around you.</p>
+          <ul class="class-features">
+            <li data-i18n="class_individual_f1">Flexible preferred times</li>
+            <li data-i18n="class_individual_f2">Fully personalized pace</li>
+            <li data-i18n="class_individual_f3">One-time or ongoing billing</li>
+          </ul>
+          <button class="btn btn-outline class-btn" data-open-modal="signup" data-i18n="btn_request">Request This</button>
+        </div>
+
+        <div class="class-card class-card-featured">
+          <span class="class-badge" data-i18n="class_badge_popular">Most Popular</span>
+          <div class="class-icon">&#128249;</div>
+          <h3 data-i18n="class_zoom_title">Online / Zoom</h3>
+                    <span class="medium-tag" data-i18n="medium_tamil_only">Tamil Medium</span>
+          <p data-i18n="class_zoom_desc">Live Zoom classes from anywhere, with recordings and notes provided.</p>
+          <ul class="class-features">
+            <li data-i18n="class_zoom_f1">Join from any device</li>
+            <li data-i18n="class_zoom_f2">Session recordings available</li>
+            <li data-i18n="class_zoom_f3">Billed per term</li>
+          </ul>
+          <button class="btn btn-primary class-btn" data-open-modal="signup" data-i18n="btn_request">Request This</button>
+        </div>
+
+        <div class="class-card">
+          <div class="class-icon">&#128101;</div>
+          <h3 data-i18n="class_group_title">Physical Group</h3>
+                    <span class="medium-tag" data-i18n="medium_tamil_only">Tamil Medium</span>
+          <p data-i18n="class_group_desc">Small group sessions held at the family home on a fixed schedule.</p>
+          <ul class="class-features">
+            <li data-i18n="class_group_f1">Fixed weekly schedule</li>
+            <li data-i18n="class_group_f2">Learn alongside classmates</li>
+            <li data-i18n="class_group_f3">Monthly billing</li>
+          </ul>
+          <button class="btn btn-outline class-btn" data-open-modal="signup" data-i18n="btn_request">Request This</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- ================= FEES SECTION ================= -->
+  <section class="fees" id="fees">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow" data-i18n="fees_eyebrow">Simple & Transparent</span>
+        <h2 data-i18n="fees_title">Fees</h2>
+        <p data-i18n="fees_desc">Pricing depends on the class type. Exact rates are confirmed when your class request is approved.</p>
+      </div>
+
+      <div class="fees-grid">
+
+        <div class="fee-card">
+          <h3 data-i18n="fee_individual_title">Individual / Home</h3>
+          <div class="fee-price">LKR<span data-price="individual">1500</span><span class="fee-period" data-i18n="fee_period_session">/ session</span></div>
+          <p data-i18n="fee_individual_note">Billed one-time or per session, based on your arrangement.</p>
+        </div>
+
+        <div class="fee-card">
+          <h3 data-i18n="fee_zoom_title">Online / Zoom</h3>
+          <div class="fee-price">LKR<span data-price="zoom">5000</span><span class="fee-period" data-i18n="fee_period_term">/ term</span></div>
+          <p data-i18n="fee_zoom_note">Billed per academic term, includes recordings and materials.</p>
+        </div>
+
+        <div class="fee-card">
+          <h3 data-i18n="fee_group_title">Physical Group</h3>
+          <div class="fee-price">LKR<span data-price="group">250</span><span class="fee-period" data-i18n="fee_period_class">/ class</span></div>
+          <p data-i18n="fee_group_note">Billed per class attended.</p>
+        </div>
+
+      </div>
+
+      <p class="fees-footnote" data-i18n="fees_footnote">Payments accepted via cash or bank transfer. Online payment is coming soon.</p>
+    </div>
+  </section>
+   <!-- ================= ABOUT SECTION ================= -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+
+      <div class="about-image">
+        <div class="about-photo-frame">
+          <img src="images/profile.jpg" alt="Naina Mohamed Roominas" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+        </div>
+      </div>
+
+      <div class="about-text">
+        <span class="section-eyebrow" data-i18n="about_eyebrow">Meet Your Teacher</span>
+        <h2 data-i18n="about_title">About Level Up Educational Centre</h2>
+        <h3>Naina Mohamed Roominas</h3>
+        <p data-i18n="about_bio">With 25 years of experience teaching Mathematics and Science, Naina Mohamed Roominas has guided generations of students toward academic success through patient, personalized instruction tailored to each student's pace and level.</p>
+        <div class="about-badge" data-i18n="about_badge">25+ Years of Teaching Experience</div>
+
+        <div class="about-mv-grid">
+          <div class="about-mv-card">
+            <h4 data-i18n="about_mission_title">Our Mission</h4>
+            <p data-i18n="about_mission_text">To provide every student with clear, personalized guidance that builds real understanding — not just exam results.</p>
+          </div>
+          <div class="about-mv-card">
+            <h4 data-i18n="about_vision_title">Our Vision</h4>
+            <p data-i18n="about_vision_text">To help students level up with confidence — today's learning, leading to tomorrow's success.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-eyebrow" data-i18n="contact_eyebrow">Get In Touch</span>
+        <h2 data-i18n="contact_title">Contact Us</h2>
+        <p data-i18n="contact_desc">Have a question or want to request a class? Reach out any way that suits you.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+
+          <div class="contact-item">
+            <div class="contact-icon">&#128222;</div>
+            <div>
+              <h4 data-i18n="contact_phone_label">Phone</h4>
+              <p><span data-i18n="contact_phone_main">Main:</span> <a href="tel:+94777552523">+94 77 755 2523</a><br>
+                 <span data-i18n="contact_phone_sub">Sub:</span> <a href="tel:+94727865687">+94 72 786 5687</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">&#9993;</div>
+            <div>
+              <h4 data-i18n="contact_email_label">Email</h4>
+              <p><a href="mailto:roominasedu@gmail.com">roominasedu@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">&#128205;</div>
+            <div>
+              <h4 data-i18n="contact_address_label">Address</h4>
+              <p>94, 32 1st Cross Street, Thillaiyadi, Puttalam, Sri Lanka</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">&#128336;</div>
+            <div>
+              <h4 data-i18n="contact_hours_label">Hours</h4>
+              <p data-i18n="contact_hours_text">Open 7 Days &mdash; 9:00 AM to 9:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.facebook.com/share/18XoBSFiWY/" target="_blank" rel="noopener" class="social-btn social-fb" data-i18n="social_fb">
+              Facebook Page
+            </a>
+            <a href="https://wa.me/94777552523" target="_blank" rel="noopener" class="social-btn social-wa" data-i18n="social_wa">
+              Chat on WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+        <form class="contact-form" action="contact-process.php" method="POST">
+  <input type="text" name="full_name" placeholder="Full name" required data-i18n-placeholder="contact_form_name_ph">
+  <input type="email" name="email" placeholder="Email address" required data-i18n-placeholder="contact_form_email_ph">
+  <input type="tel" name="whatsapp_number" placeholder="WhatsApp number (with country code)" required data-i18n-placeholder="contact_form_whatsapp_ph">
+  <textarea name="message" placeholder="Your message" rows="5" required data-i18n-placeholder="contact_form_message_ph"></textarea>
+  <button type="submit" class="btn btn-primary" data-i18n="contact_form_btn">Send Message</button>
+</form>
+
+      </div>
+
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8593644931284!2d79.84287117351722!3d8.013435604061472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afd161c0995bb23%3A0xa0d388baab862e2!2s94%201st%20Cross%20St%2C%20Puttalam%2C%20Sri%20Lanka!5e0!3m2!1sen!2smy!4v1792707726054!5m2!1sen!2smy" width="400" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= LOGO ENLARGE POPUP ================= -->
+  <div class="lightbox-overlay" id="logoLightbox">
+    <img src="images/logo.png" alt="Level Up Educational Centre" class="lightbox-img">
+  </div>
+
+  <!-- ================= LOGIN / SIGN UP MODAL ================= -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close">&times;</button>
+
+      <div class="modal-tabs">
+        <div class="modal-tab active" data-tab="login" data-i18n="modal_login_tab">Login</div>
+        <div class="modal-tab" data-tab="signup" data-i18n="modal_signup_tab">Sign Up</div>
+      </div>
+
+      <form class="modal-form active" data-form="login" action="login-process.php" method="POST">
+  <input type="email" name="email" placeholder="Email address" required data-i18n-placeholder="modal_login_email_ph">
+  <input type="password" name="password" placeholder="Password" required data-i18n-placeholder="modal_login_pass_ph">
+  <button type="submit" class="btn btn-primary" data-i18n="modal_login_btn">Log In</button>
+</form>
+     <form class="modal-form" data-form="signup" action="signup-process.php" method="POST">
+  <input type="text" name="full_name" placeholder="Full name" required data-i18n-placeholder="modal_signup_name_ph">
+  <input type="email" name="email" placeholder="Email address" required data-i18n-placeholder="modal_signup_email_ph">
+  <div class="modal-phone-row">
+  <div class="phone-code-select">
+    <img id="whatsappFlag" src="https://flagcdn.com/24x18/lk.png" alt="" class="phone-flag-icon">
+    <select name="whatsapp_country" id="whatsappCountry">
+      <option value="+94" data-flag="lk" selected>+94</option>
+      <option value="+91" data-flag="in">+91</option>
+      <option value="+60" data-flag="my">+60</option>
+      <option value="+65" data-flag="sg">+65</option>
+      <option value="+44" data-flag="gb">+44</option>
+      <option value="+971" data-flag="ae">+971</option>
+      <option value="+1" data-flag="us">+1</option>
+    </select>
+  </div>
+  <input type="tel" name="whatsapp_number" placeholder="WhatsApp number (with country code)" required data-i18n-placeholder="modal_signup_whatsapp_ph">
+</div>
+  <input type="password" name="password" placeholder="Create password" required data-i18n-placeholder="modal_signup_pass_ph">
+  <button type="submit" class="btn btn-primary" data-i18n="modal_signup_btn">Create Account</button>
+</form>
+    </div>
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
